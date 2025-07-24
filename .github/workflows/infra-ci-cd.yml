@@ -32,7 +32,7 @@ jobs:
       name: Cache plugin dir
       with:
         path: ~/.tflint.d/plugins
-        key: tflint-${{ hashFiles('.tflint.hcl') }}
+        key: tflint-${{ hashFiles('infra/tf-app/.tflint.hcl') }}
 
     - uses: terraform-linters/setup-tflint@v4
       name: Setup TFLint
@@ -41,15 +41,17 @@ jobs:
 
     - name: Show version
       run: tflint --version
+      working-directory: ./infra/tf-app
 
     - name: Init TFLint
       run: tflint --init
+      working-directory: ./infra/tf-app
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Run TFLint
-      id: tflint
       run: tflint -f compact
+      working-directory: ./infra/tf-app
  
   terraform-plan:
     name: 'Terraform Plan'
