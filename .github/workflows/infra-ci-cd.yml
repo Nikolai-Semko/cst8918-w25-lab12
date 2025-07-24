@@ -41,9 +41,11 @@ jobs:
 
     - name: Show version
       run: tflint --version
+      working-directory: ./infra/tf-app
 
     - name: Init TFLint
       run: tflint --init
+      working-directory: ./infra/tf-app
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
