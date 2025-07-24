@@ -1,6 +1,11 @@
 CST8918 - DevOps: Infrastructure as Code  
 Prof. Robert McKenney
 
+# Team Members
+- Nikolai Semko         - https://github.com/Nikolai-Semko/ - semk0001
+- Nirajan Khadka        - https://github.com/khad0062/      - khad0062
+- Sai Karthick Kalidoss - https://github.com/kali0055/      - kali0055
+
 # Lab 12: Terraform CI/CD on Azure with GitHub Actions
 
 ## Background
